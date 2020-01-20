@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My simple web</title>
+    <!-- 	<link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+
+
+<style>
+    body {
+        background-color: darkgoldenrod;
+    }
+    
+    div {
+        margin-top: 2px;
+        color: darkred;
+    }
+    
+    b {
+        color: firebrick;
+    }
+    
+    .label {
+        border-radius: 10px;
+    }
+    
+    button {
+        font-size: 20px;
+    }
+    
+    i {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    texarea {
+        border-radius: 4px;
+        text-align: center;
+    }
+    h1{
+        text-shadow: 6px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+
+            <h1>Sign In Now! !</h1>
+
+
+        </div>
+
+        <h1>Sign In Page</h1><br> Select Gender<select>
+  <option value="volvo">Select gender:</option><br>
+  <option value="saab">Male</option>
+  <option value="opel">Female</option>
+  
+</select>
+        <button class="btn btn-success btn-xs active">Comfirm !</button><br>
+        <!-- 	.form-group
+	.form-control -->
+        <br>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block"><b>Select a file</b></p>
+            </div>
+            <div class="checkbox">
+                <label>
+	      <input type="checkbox"> Check me out
+	    </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button><br>
+        </form>
+        <br>
+
+
+        <!-- Inline Form -->
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder=" Example =isaac">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Exap..isaacmongu67@gmail.com">
+            </div>
+            <button type="submit" class="btn btn-default">Comfirm regestration!</button><br>
+
+
+        </form><br>
+        <p><b><i>For more info please contact us @ <a href="mailto:isaacmongo67@gmail.com">isaacmongu67@gmail.com</a></i></b></p><br> Add your comment
+        <form action="/html/tags/html_form_tag_action.cfm" method="post">
+            <div>
+                <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+
+</textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

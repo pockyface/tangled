@@ -1,0 +1,202 @@
+<html>
+ <head>
+  <title>car running </title>
+  <link rel="stylesheet" href="style.css">
+ </head>
+    
+    
+    <style>
+    {
+ margin: o;
+ padding: 0;
+}
+.hero
+{
+    height: 100vh;
+	width: 100%;
+	background-image: url(sky.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+.highway
+{
+	height: 200px;
+	width: 400%;
+	display: block;
+	background-image: url(road.jpg);
+	position: absolute;
+
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+    background-repeat: repeat-x;
+	animation: highway 10s linear infinite;
+	
+}
+@keyframes highway
+{
+	100%
+	{
+		transform: translateX(-2000px);
+	}
+  	
+	
+}
+.city
+{
+	height: 250px;
+	width: 500%;
+	background-image: url(city.png);
+	position: absolute;
+	bottom: 200px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: repeat-x;
+	animation: city 20s linear infinite;
+}
+@keyframes city
+{
+	100%
+	{
+		transform: translateX(-1400px);
+		
+	}
+}
+.car
+{
+	 width: 400px;
+	 left: 50%;
+	 bottom: 100px;
+	 transform: translateX(-50%);
+	 position: absolute;
+	 z-index: 2;
+	
+}
+.car img
+{
+	width: 100%;
+	
+	animation: car 1s linear infinite;
+}
+@keyframes car
+  100%{
+	  transform: translatey(-1px);
+	   }
+	   50%{
+	  transform: translatey(1px);
+	   }
+	   0%{
+	  transform: translatey(-1px);
+	   }
+.wheel
+{
+	left: 50%;
+	bottom: 178px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+	
+}	   
+.wheel img
+{
+	width: 72px;
+	height: 72px;
+	animation: wheel 1s linear infinite;
+}
+.back-wheel
+{
+	left: -165px;
+	position: absolute;
+}	   
+.front-wheel
+{
+	left: 80px;
+	position: absolute;
+}	   
+	   
+@keyframes wheel
+{
+	100%{
+		transform: rotate(360deg);
+		
+	}
+	
+	   
+    h2{
+        text-align: center;
+    }
+    
+    
+    .ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+    
+    
+    p{
+        text-align: center;
+    }
+    </style>
+ <body>
+ 
+  <div class="hero"> 
+  
+  
+    
+  
+  <div class="highway"> </div>
+  <div class="city"> </div>
+  
+     
+  <div class="car">
+       <p> Just for fun</p>
+    <h1 class="ml2">Free by now </h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <h3> Call this driver at 18513387599 </h3>
+  <img src="car.png">
+  </div>
+  <div class="wheel">
+   <img src="wheel.png" class="back-wheel">
+   <img src="wheel.png" class="front-wheel">
+  </div>
+ 
+ </div>
+     
+     
+     <script>
+     
+     // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+     
+     </script>
+ </body>
+</html>
